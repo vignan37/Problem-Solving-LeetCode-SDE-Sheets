@@ -11,6 +11,9 @@ Example 1:
 Input: nums = [2,0,2,1,1,0]
 Output: [0,0,1,1,2,2] */
 
+/* traditional : count num of 0, 1,2 and update the array. 2 iteration solution.*/
+/*Dutch national flag algo in one iteration*/
+
 class Solution {
     public void sortColors(int[] nums) {
         int low=0;
