@@ -28,7 +28,6 @@ Constraints:
 The number of nodes in the tree is in the range [0, 2000].
 -1000 <= Node.val <= 1000
 */
-
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -52,7 +51,9 @@ class Solution {
         }
         Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
+        //use a queue and while loop
         while(queue.size()!=0){
+            // find levelSize and use for loop to pop stuff
             int levelSize = queue.size();
             List<Integer> ls = new ArrayList<>();
             // remove from queue, add childs and update the level list with val
