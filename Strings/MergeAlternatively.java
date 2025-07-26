@@ -1,4 +1,6 @@
 
+//use SB instead of normal string to create the merged string, optimizes both space and time.
+
 class Solution {
     public String mergeAlternately(String word1, String word2) {
         int n = Math.max(word1.length(),word2.length());
@@ -14,9 +16,10 @@ class Solution {
         return mergedString.toString();
     }
 }
+
+//This was part of LC blind 75
 //https://leetcode.com/problems/merge-strings-alternately/
 
-//use SB instead of normal string to create the merged string, optimizes both space and time.
 
 /*
  * 1768. Merge Strings Alternately
