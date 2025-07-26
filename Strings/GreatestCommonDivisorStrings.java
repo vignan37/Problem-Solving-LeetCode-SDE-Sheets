@@ -23,9 +23,11 @@ class Solution {
 //Other approach
 //remove the smaller prefix from larger one, until both are equal.
 
+//This was part of LC blind 75
 // https://leetcode.com/problems/greatest-common-divisor-of-strings
 /* 
 1071. Greatest Common Divisor of Strings
+
 Solved
 
 For two strings s and t, we say "t divides s" if and only if s = t + t + t + ... + t + t (i.e., t is concatenated with itself one or more times).
