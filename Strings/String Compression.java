@@ -1,3 +1,41 @@
+//more cleaner approach delegate the write responsibility to a method.
+
+class Solution {
+    public int compress(char[] chars) {
+        int n = chars.length;
+        if (n == 1) return 1;
+
+        int entry = 0;
+        int count = 1;
+
+        for (int i = 1; i < n; i++) {
+            if (chars[i] == chars[i - 1]) {
+                count++;
+            } else {
+                entry = write(chars, entry, chars[i - 1], count);
+                count = 1;
+            }
+        }
+
+        // Write the last group
+        entry = write(chars, entry, chars[n - 1], count);
+        return entry;
+    }
+
+    private int write(char[] chars, int index, char ch, int count) {
+        chars[index++] = ch;
+        if (count > 1) {
+            for (char c : String.valueOf(count).toCharArray()) {
+                chars[index++] = c;
+            }
+        }
+        return index;
+    }
+}
+
+
+/*
+ 
 class Solution {
     public int compress(char[] chars) {
         if (chars.length == 0) {
@@ -34,7 +72,7 @@ class Solution {
         return arrayEntryPointer;
     }
 }
-
+*/
 
 /*
 443. String Compression
