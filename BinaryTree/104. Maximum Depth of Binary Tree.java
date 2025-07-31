@@ -15,7 +15,7 @@
  */
 
 //using recursion
-// get the base case, then deligate to future recursive calls, and the lil calculation
+// find the left depth and right depth and return 1 + max of them, recurrsion will handle the rest
 class Solution {
     public int maxDepth(TreeNode root) {
         if(root == null){return 0;}
@@ -24,7 +24,8 @@ class Solution {
     }
 }
 
-//Using level order traversal
+// Using level order traversal
+// find the number of levels its the max depth.
 public int maxDepth(TreeNode root) {
         if(root == null){return 0;}
         Queue<TreeNode> q = new LinkedList<TreeNode>();
