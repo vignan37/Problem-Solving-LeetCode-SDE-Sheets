@@ -1,0 +1,66 @@
+// A1 : Push the Nodes to a Set and check if it already exists
+// A2 : Run a slow pointer and fast pointer, if cyclic then they will be equal at some point.
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        ListNode slow=head,fast=head;
+        while(fast!=null && fast.next!=null){
+            slow = slow.next;
+            fast = fast.next.next;
+            if(slow==fast){
+                return true;
+            }
+        }
+        return false;
+    }
+}
+
+// A1 : push nodes to a set
+ public class Solution {
+    public boolean hasCycle(ListNode head) {
+        Set<ListNode> set = new HashSet<ListNode>();
+        while(head!=null){
+            if(!set.add(head)){
+                return true;
+            }
+            head = head.next;
+        }
+        return false;
+        
+    }
+}
+
+
+/*A2 complex
+public class Solution {
+    public boolean hasCycle(ListNode head) {
+        if(head == null || head.next==null) return false;
+        ListNode slow=head,fast=head.next.next;
+        while(head!=null){
+            if(slow==fast){
+                return true;
+            }
+            else{
+                slow = slow.next;
+                if(fast !=null && fast.next!=null){
+                    fast = fast.next.next;
+                }
+                else return false;
+            }
+        }
+        return false;
+    }
+}
+*/
+
+
+/**
+ * Definition for singly-linked list.
+ * class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode(int x) {
+ *         val = x;
+ *         next = null;
+ *     }
+ * }
+ */
