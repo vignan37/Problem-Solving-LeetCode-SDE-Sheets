@@ -1,7 +1,6 @@
-
  // A1 using set O(n), S: O(n)
  // A2 : Find two lengths and trim the extra ones head to right length and then compare, O(n) S:O(1)
-public class Solution {
+public class IntersectionOfTwoLL {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         // get both lengths
         int lA = getLength(headA), lB= getLength(headB);
