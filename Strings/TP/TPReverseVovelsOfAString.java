@@ -1,4 +1,3 @@
-
 //Using two pointers TP at both ends and checking if left vovel and right end vovel if both then swap
 // Use String builder as string is immutable.
 // to convert character to lowercase use Character.toLowerCase('A');

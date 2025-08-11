@@ -1,4 +1,4 @@
-//using a while loop makes everything simple. loop from end , find a word using two pointers, append, and add space.
+// using a while loop makes everything simple. loop from end , find a word using two pointers, append, and add space.
 //Or quickie use string methods, trim(), split(' '), isEmpty()
 
 class Solution {
