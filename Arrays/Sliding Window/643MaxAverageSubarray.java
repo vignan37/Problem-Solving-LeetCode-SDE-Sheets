@@ -1,10 +1,32 @@
-
 // you can solve it two ways using sliding window
 // 1. cal num[i]/k and process like sliding window
 // 2. do sliding window to find max and return avg
 
+//using sliding window then avg
 class Solution {
     public double findMaxAverage(int[] nums, int k) {
+        double max = Integer.MIN_VALUE;
+        double curr = 0;
+        
+        int i=0,j=0;
+        while(j<nums.length){
+            curr += nums[j];
+            if(j-i+1<k){
+                j++;
+            }
+            else if(j-i+1==k){
+                max = Math.max(curr, max);
+                curr -= nums[i];
+                j++;
+                i++;
+            }
+        }
+        return max/k;
+    }
+}
+
+// using avg method
+public double findMaxAverage(int[] nums, int k) {
         double maxAvg = Integer.MIN_VALUE;
         double currAvg = 0;
         
@@ -23,7 +45,7 @@ class Solution {
         }
         return maxAvg;
     }
-}
+    
 
 /*
 643. Maximum Average Subarray I
