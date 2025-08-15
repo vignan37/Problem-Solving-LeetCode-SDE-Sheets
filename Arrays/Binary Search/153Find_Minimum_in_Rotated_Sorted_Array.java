@@ -1,5 +1,6 @@
 //Using binary search will reduce the time complexity.
 // Min can be to right or it can be to left or even on mid
+// loop stops when start is equal to end
 
 class Solution {
     public int findMin(int[] nums) {
