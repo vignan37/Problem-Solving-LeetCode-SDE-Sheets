@@ -1,3 +1,6 @@
+// Use Binary Search with start,mid and end to optimized solution
+// be careful about the setting of start and end
+// also while setting the mid, try start + (end-start) so int doesnt overflow
 public class Solution extends GuessGame {
     public int guessNumber(int n) {
             int start = 1, end = n;
